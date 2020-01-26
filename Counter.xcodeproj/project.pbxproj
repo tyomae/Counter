@@ -3,27 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		802E2572A360A778ED1CC1C4 /* Pods_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF723DD8E222F077BAE78F5F /* Pods_Counter.framework */; };
 		EE390119236D7BAD009A8B99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE390118236D7BAD009A8B99 /* AppDelegate.swift */; };
-		EE39011B236D7BAD009A8B99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39011A236D7BAD009A8B99 /* SceneDelegate.swift */; };
-		EE39011D236D7BAD009A8B99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39011C236D7BAD009A8B99 /* ViewController.swift */; };
+		EE39011D236D7BAD009A8B99 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39011C236D7BAD009A8B99 /* CounterViewController.swift */; };
 		EE390120236D7BAD009A8B99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE39011E236D7BAD009A8B99 /* Main.storyboard */; };
 		EE390122236D7BAF009A8B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE390121236D7BAF009A8B99 /* Assets.xcassets */; };
 		EE390125236D7BAF009A8B99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE390123236D7BAF009A8B99 /* LaunchScreen.storyboard */; };
+		EE39012D236D8051009A8B99 /* CustomCounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39012C236D8051009A8B99 /* CustomCounterTableViewCell.swift */; };
+		EE913DA7236D926900075743 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DA6236D926900075743 /* CounterModel.swift */; };
+		EE913DA9236D948A00075743 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DA8236D948A00075743 /* StorageManager.swift */; };
+		EE913DAB2370125600075743 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DAA2370125600075743 /* MainViewController.swift */; };
+		EE913DAD2370137A00075743 /* CustomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DAC2370137A00075743 /* CustomListTableViewCell.swift */; };
+		EE913DAF23701B7900075743 /* CounterStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DAE23701B7900075743 /* CounterStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AB51C0983FB4E6853FBC69C /* Pods-Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Counter.debug.xcconfig"; path = "Target Support Files/Pods-Counter/Pods-Counter.debug.xcconfig"; sourceTree = "<group>"; };
+		7C4C66616A9C0F9FEA845D9A /* Pods-Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Counter.release.xcconfig"; path = "Target Support Files/Pods-Counter/Pods-Counter.release.xcconfig"; sourceTree = "<group>"; };
+		CF723DD8E222F077BAE78F5F /* Pods_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE390115236D7BAD009A8B99 /* Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE390118236D7BAD009A8B99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE39011A236D7BAD009A8B99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE39011C236D7BAD009A8B99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE39011C236D7BAD009A8B99 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		EE39011F236D7BAD009A8B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE390121236D7BAF009A8B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE390124236D7BAF009A8B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE390126236D7BAF009A8B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE39012C236D8051009A8B99 /* CustomCounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCounterTableViewCell.swift; sourceTree = "<group>"; };
+		EE913DA6236D926900075743 /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		EE913DA8236D948A00075743 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		EE913DAA2370125600075743 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EE913DAC2370137A00075743 /* CustomListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListTableViewCell.swift; sourceTree = "<group>"; };
+		EE913DAE23701B7900075743 /* CounterStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				802E2572A360A778ED1CC1C4 /* Pods_Counter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34E5BEAA287204216EB9CA78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AB51C0983FB4E6853FBC69C /* Pods-Counter.debug.xcconfig */,
+				7C4C66616A9C0F9FEA845D9A /* Pods-Counter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C51ABDEFFF8EB2C47F26591F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF723DD8E222F077BAE78F5F /* Pods_Counter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE39010C236D7BAC009A8B99 = {
 			isa = PBXGroup;
 			children = (
 				EE390117236D7BAD009A8B99 /* Counter */,
 				EE390116236D7BAD009A8B99 /* Products */,
+				34E5BEAA287204216EB9CA78 /* Pods */,
+				C51ABDEFFF8EB2C47F26591F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +91,14 @@
 			isa = PBXGroup;
 			children = (
 				EE390118236D7BAD009A8B99 /* AppDelegate.swift */,
-				EE39011A236D7BAD009A8B99 /* SceneDelegate.swift */,
-				EE39011C236D7BAD009A8B99 /* ViewController.swift */,
+				EE913DAA2370125600075743 /* MainViewController.swift */,
+				EE39011C236D7BAD009A8B99 /* CounterViewController.swift */,
 				EE39011E236D7BAD009A8B99 /* Main.storyboard */,
+				EE913DAC2370137A00075743 /* CustomListTableViewCell.swift */,
+				EE39012C236D8051009A8B99 /* CustomCounterTableViewCell.swift */,
+				EE913DA6236D926900075743 /* CounterModel.swift */,
+				EE913DAE23701B7900075743 /* CounterStorage.swift */,
+				EE913DA8236D948A00075743 /* StorageManager.swift */,
 				EE390121236D7BAF009A8B99 /* Assets.xcassets */,
 				EE390123236D7BAF009A8B99 /* LaunchScreen.storyboard */,
 				EE390126236D7BAF009A8B99 /* Info.plist */,
@@ -74,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE390129236D7BAF009A8B99 /* Build configuration list for PBXNativeTarget "Counter" */;
 			buildPhases = (
+				E919C3BD7279188CCCFF0062 /* [CP] Check Pods Manifest.lock */,
 				EE390111236D7BAD009A8B99 /* Sources */,
 				EE390112236D7BAD009A8B99 /* Frameworks */,
 				EE390113236D7BAD009A8B99 /* Resources */,
+				E7C15B255C460D0725B86135 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +174,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E7C15B255C460D0725B86135 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Counter/Pods-Counter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Counter/Pods-Counter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Counter/Pods-Counter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E919C3BD7279188CCCFF0062 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Counter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE390111236D7BAD009A8B99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE39011D236D7BAD009A8B99 /* ViewController.swift in Sources */,
+				EE39011D236D7BAD009A8B99 /* CounterViewController.swift in Sources */,
 				EE390119236D7BAD009A8B99 /* AppDelegate.swift in Sources */,
-				EE39011B236D7BAD009A8B99 /* SceneDelegate.swift in Sources */,
+				EE913DAD2370137A00075743 /* CustomListTableViewCell.swift in Sources */,
+				EE39012D236D8051009A8B99 /* CustomCounterTableViewCell.swift in Sources */,
+				EE913DAB2370125600075743 /* MainViewController.swift in Sources */,
+				EE913DA9236D948A00075743 /* StorageManager.swift in Sources */,
+				EE913DA7236D926900075743 /* CounterModel.swift in Sources */,
+				EE913DAF23701B7900075743 /* CounterStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +370,13 @@
 		};
 		EE39012A236D7BAF009A8B99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AB51C0983FB4E6853FBC69C /* Pods-Counter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DT65SS5ZB;
 				INFOPLIST_FILE = Counter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +390,13 @@
 		};
 		EE39012B236D7BAF009A8B99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C4C66616A9C0F9FEA845D9A /* Pods-Counter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DT65SS5ZB;
 				INFOPLIST_FILE = Counter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,24 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eDj-Zf-uef">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Counter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UbU-5M-G42">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="103" id="yTD-Z0-uoc" customClass="CustomCounterTableViewCell" customModule="Counter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yTD-Z0-uoc" id="cM7-gV-d2h">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odz-TC-1AQ">
+                                                    <rect key="frame" x="72" y="35" width="270" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTd-Vv-BGJ">
+                                                    <rect key="frame" x="350" y="29.5" width="44" height="44"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="fRX-rQ-S8l"/>
+                                                        <constraint firstAttribute="width" constant="44" id="gTG-xr-ZMO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="37"/>
+                                                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
+                                                    <state key="normal" title="+">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="22"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="plusButton:" destination="yTD-Z0-uoc" eventType="touchUpInside" id="rxb-C3-NNS"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33K-9k-zpg">
+                                                    <rect key="frame" x="20" y="29.5" width="44" height="44"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="4dy-Nc-pNp"/>
+                                                        <constraint firstAttribute="height" constant="44" id="kFE-Sh-kdw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="60"/>
+                                                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="11"/>
+                                                    <state key="normal" title="-">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="22"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="minusButton:" destination="yTD-Z0-uoc" eventType="touchUpInside" id="w5H-gf-y50"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="odz-TC-1AQ" firstAttribute="leading" secondItem="33K-9k-zpg" secondAttribute="trailing" constant="8" id="0R2-nT-yU8"/>
+                                                <constraint firstItem="oTd-Vv-BGJ" firstAttribute="leading" secondItem="odz-TC-1AQ" secondAttribute="trailing" constant="8" id="C8A-4Z-4sr"/>
+                                                <constraint firstItem="odz-TC-1AQ" firstAttribute="centerX" secondItem="cM7-gV-d2h" secondAttribute="centerX" id="Vp2-vt-9EM"/>
+                                                <constraint firstItem="odz-TC-1AQ" firstAttribute="top" secondItem="cM7-gV-d2h" secondAttribute="topMargin" constant="24" id="Y3n-xA-X2l"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="odz-TC-1AQ" secondAttribute="bottom" constant="25" id="go4-AC-W37"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oTd-Vv-BGJ" secondAttribute="trailing" id="iOo-iP-dq1"/>
+                                                <constraint firstItem="33K-9k-zpg" firstAttribute="leading" secondItem="cM7-gV-d2h" secondAttribute="leadingMargin" id="l3R-hC-6QD"/>
+                                                <constraint firstItem="33K-9k-zpg" firstAttribute="centerY" secondItem="cM7-gV-d2h" secondAttribute="centerY" id="oc2-GZ-Z3n"/>
+                                                <constraint firstItem="oTd-Vv-BGJ" firstAttribute="centerY" secondItem="cM7-gV-d2h" secondAttribute="centerY" id="xrW-kW-vZI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countLabel" destination="odz-TC-1AQ" id="VSH-Mm-aLV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UbU-5M-G42" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QF6-Tc-Nmb"/>
+                            <constraint firstItem="UbU-5M-G42" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QQS-0u-B8P"/>
+                            <constraint firstAttribute="bottom" secondItem="UbU-5M-G42" secondAttribute="bottom" id="Wbu-9p-MDx"/>
+                            <constraint firstItem="UbU-5M-G42" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sGG-mM-TeN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="done" systemItem="add" id="uC1-sQ-5su">
+                            <inset key="imageInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="plusButtonTouched:" destination="BYZ-38-t0r" id="J9G-d4-Xsb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="7BE-tc-iIQ"/>
+                        <barButtonItem title="Clear All" id="2E8-2C-eSw">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="clearAllButton:" destination="BYZ-38-t0r" id="Yy9-Eh-9cw"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Dsn-jT-hZ3"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clearButton" destination="2E8-2C-eSw" id="NGc-f5-ckp"/>
+                        <outlet property="tableView" destination="UbU-5M-G42" id="JuW-hZ-60y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="717" y="130"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="48o-it-ICR">
+            <objects>
+                <navigationController toolbarHidden="NO" id="eDj-Zf-uef" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LpP-WL-sAS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="28"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="asF-XS-Whs">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="NyT-Sm-m2H" kind="relationship" relationship="rootViewController" id="WHe-RA-djo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0S-DY-fjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-974" y="130"/>
+        </scene>
+        <!--Counter-->
+        <scene sceneID="vj8-rT-RoB">
+            <objects>
+                <viewController id="NyT-Sm-m2H" customClass="MainViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVN-EM-y7H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="obC-gm-6yj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="126" id="uqu-WX-dmj" customClass="CustomListTableViewCell" customModule="Counter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="126"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uqu-WX-dmj" id="t68-bp-X1i">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="counterName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpy-PX-Kp0">
+                                                    <rect key="frame" x="20" y="20" width="374" height="86"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tpy-PX-Kp0" firstAttribute="leading" secondItem="t68-bp-X1i" secondAttribute="leadingMargin" id="HGr-Ha-qbK"/>
+                                                <constraint firstAttribute="bottom" secondItem="tpy-PX-Kp0" secondAttribute="bottom" constant="20" id="giG-0u-gCB"/>
+                                                <constraint firstItem="tpy-PX-Kp0" firstAttribute="top" secondItem="t68-bp-X1i" secondAttribute="top" constant="20" id="kut-iA-rMJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tpy-PX-Kp0" secondAttribute="trailing" id="xko-yy-o9u"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="listLabel" destination="tpy-PX-Kp0" id="g57-E4-K8H"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="showCounter" id="F4n-rs-Y6N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="obC-gm-6yj" firstAttribute="top" secondItem="tVN-EM-y7H" secondAttribute="top" id="5nY-af-hNm"/>
+                            <constraint firstItem="obC-gm-6yj" firstAttribute="trailing" secondItem="VSQ-Nk-vkQ" secondAttribute="trailing" id="7xr-o9-UbA"/>
+                            <constraint firstAttribute="bottom" secondItem="obC-gm-6yj" secondAttribute="bottom" id="ADs-QP-tg6"/>
+                            <constraint firstItem="obC-gm-6yj" firstAttribute="leading" secondItem="VSQ-Nk-vkQ" secondAttribute="leading" id="kXP-hN-k2W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VSQ-Nk-vkQ"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="add" id="9Li-e5-PPe">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="plusButtonTouched:" destination="NyT-Sm-m2H" id="sc1-4N-mk7"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Counter" id="btC-tw-HUF">
+                        <barButtonItem key="backBarButtonItem" title="Lists" id="COA-vE-utJ"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="obC-gm-6yj" id="TlB-04-juc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGu-tF-16P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152.17391304347828" y="130.58035714285714"/>
         </scene>
     </scenes>
 </document>
