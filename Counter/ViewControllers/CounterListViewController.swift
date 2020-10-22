@@ -66,6 +66,7 @@ class CounterListViewController: UIViewController, UITableViewDataSource, UITabl
            guard let indexPath = tableView.indexPathForSelectedRow else { return }
         
         svc.countersStorage = counterStorages[indexPath.row]
+		svc.counterTitle = counterStorages[indexPath.row].name
            }
     
     private func addList(name: String) {
@@ -80,8 +81,8 @@ class CounterListViewController: UIViewController, UITableViewDataSource, UITabl
             textField.placeholder = "Enter List Name"
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
-            let firstTextField = alertController.textFields![0] as UITextField
-            guard let text = firstTextField.text, !text.isEmpty else { return }
+			guard let textField  = alertController.textFields?.first else { return }
+            guard let text = textField.text, !text.isEmpty else { return }
             self.addList(name: text)
             self.tableView.reloadData()
         })
@@ -94,6 +95,3 @@ class CounterListViewController: UIViewController, UITableViewDataSource, UITabl
         self.present(alertController, animated: true, completion: nil)
 	}
 }
-
-
-

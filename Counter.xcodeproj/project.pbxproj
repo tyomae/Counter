@@ -19,6 +19,7 @@
 		EEDEEF70243DF5660049E268 /* CounterStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEEF6D243DF5660049E268 /* CounterStorage.swift */; };
 		EEDEEF71243DF5660049E268 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEEF6E243DF5660049E268 /* CounterModel.swift */; };
 		EEDEEF72243DF5660049E268 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEEF6F243DF5660049E268 /* StorageManager.swift */; };
+		EEE955E92541F80D00BAB614 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE955E82541F80D00BAB614 /* CounterState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		EEDEEF6D243DF5660049E268 /* CounterStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterStorage.swift; sourceTree = "<group>"; };
 		EEDEEF6E243DF5660049E268 /* CounterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
 		EEDEEF6F243DF5660049E268 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		EEE955E82541F80D00BAB614 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,7 @@
 				EEE955E52541CE7900BAB614 /* ViewControllers */,
 				EEE955E62541CF7B00BAB614 /* Views */,
 				EEE955E42541CE5D00BAB614 /* Models */,
-				EEE955E72541D59600BAB614 /* Services */,
+				EEE955E72541D59600BAB614 /* Helpers */,
 				EE390118236D7BAD009A8B99 /* AppDelegate.swift */,
 				EE39011E236D7BAD009A8B99 /* Main.storyboard */,
 				EE390121236D7BAF009A8B99 /* Assets.xcassets */,
@@ -130,12 +132,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		EEE955E72541D59600BAB614 /* Services */ = {
+		EEE955E72541D59600BAB614 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				EEDEEF6F243DF5660049E268 /* StorageManager.swift */,
+				EEE955E82541F80D00BAB614 /* CounterState.swift */,
 			);
-			path = Services;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE955E92541F80D00BAB614 /* CounterState.swift in Sources */,
 				EEDEEF70243DF5660049E268 /* CounterStorage.swift in Sources */,
 				EEDEEF71243DF5660049E268 /* CounterModel.swift in Sources */,
 				EE39011D236D7BAD009A8B99 /* CounterViewController.swift in Sources */,
