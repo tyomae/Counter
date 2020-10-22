@@ -15,20 +15,15 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     private var counters: [Counter] {
         return Array(countersStorage.counters)
     }
-    
-    
-    
+	
     @IBOutlet var tableView: UITableView!
     @IBOutlet var clearButton: UIBarButtonItem!
     
-    
     @IBAction func plusButtonTouched(_ sender: Any) {
-        addCounter()
-        checkEnableClearAllButton()
+		self.addCounter()
+		self.checkEnableClearAllButton()
         tableView.reloadData()
     }
-    
-    
     
     override func viewDidLoad() {
         
@@ -101,60 +96,62 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
        }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alertController = UIAlertController(title: "Enter number", message: "", preferredStyle: UIAlertController.Style.alert)
-        alertController.view.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.textAlignment = .center
-            textField.placeholder = "Enter number"
-            textField.keyboardType = .numberPad
-        }
-        let plusAction = UIAlertAction(title: "+", style: UIAlertAction.Style.default, handler: { alert -> Void in
-            let firstTextField = alertController.textFields![0] as UITextField
-            guard let text = firstTextField.text, !text.isEmpty else { return }
-             try? realm.write {
-            self.counters[indexPath.row].value += Int(text)!
-            }
-            self.tableView.reloadData()
-        })
-        let minusAction = UIAlertAction(title: "-", style: UIAlertAction.Style.default, handler: { alert -> Void in
-            let firstTextField = alertController.textFields![0] as UITextField
-            guard let text = firstTextField.text, !text.isEmpty else { return }
-             try? realm.write {
-            self.counters[indexPath.row].value -= Int(text)!
-            }
-            self.tableView.reloadData()
-        })
-        
-       let cancel = UIAlertAction(title: "Cancel", style: .destructive)
-        
-        alertController.addAction(plusAction)
-        alertController.addAction(minusAction)
-        alertController.addAction(cancel)
-
-        self.present(alertController, animated: true, completion: nil)
+		self.showChangeCounterValueAlert(indexPath: indexPath)
     }
     
-    func addCounter() {
+    private func addCounter() {
         try? realm.write {
             self.countersStorage.counters.append(Counter(value: 0))
         }
-
     }
-    
-    func deleteAllCounters() {
+
+    private func deleteAllCounters() {
         counters.forEach({ counter in
             StorageManager.deleteObject(counter)
         })
     }
     
-    func checkEnableClearAllButton() {
+    private func checkEnableClearAllButton() {
         if counters.isEmpty == false {
             clearButton.isEnabled = true
         } else {
             clearButton.isEnabled = false
         }
     }
+	
+	private func showChangeCounterValueAlert(indexPath: IndexPath) {
+		 let alertController = UIAlertController(title: "Enter number", message: "", preferredStyle: UIAlertController.Style.alert)
+		 alertController.view.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+		 alertController.addTextField { (textField : UITextField!) -> Void in
+			 textField.textAlignment = .center
+			 textField.placeholder = "Enter number"
+			 textField.keyboardType = .numberPad
+		 }
+		 let plusAction = UIAlertAction(title: "+", style: UIAlertAction.Style.default, handler: { alert -> Void in
+			 let firstTextField = alertController.textFields![0] as UITextField
+			 guard let text = firstTextField.text, !text.isEmpty else { return }
+			  try? realm.write {
+			 self.counters[indexPath.row].value += Int(text)!
+			 }
+			 self.tableView.reloadData()
+		 })
+		 let minusAction = UIAlertAction(title: "-", style: UIAlertAction.Style.default, handler: { alert -> Void in
+			 let firstTextField = alertController.textFields![0] as UITextField
+			 guard let text = firstTextField.text, !text.isEmpty else { return }
+			  try? realm.write {
+			 self.counters[indexPath.row].value -= Int(text)!
+			 }
+			 self.tableView.reloadData()
+		 })
+		 
+		let cancel = UIAlertAction(title: "Cancel", style: .destructive)
+		 
+		 alertController.addAction(plusAction)
+		 alertController.addAction(minusAction)
+		 alertController.addAction(cancel)
 
+		 self.present(alertController, animated: true, completion: nil)
+	}
 }
 
 

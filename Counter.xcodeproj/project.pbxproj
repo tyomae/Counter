@@ -14,11 +14,11 @@
 		EE390122236D7BAF009A8B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE390121236D7BAF009A8B99 /* Assets.xcassets */; };
 		EE390125236D7BAF009A8B99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE390123236D7BAF009A8B99 /* LaunchScreen.storyboard */; };
 		EE39012D236D8051009A8B99 /* CustomCounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39012C236D8051009A8B99 /* CustomCounterTableViewCell.swift */; };
-		EE913DA7236D926900075743 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DA6236D926900075743 /* CounterModel.swift */; };
-		EE913DA9236D948A00075743 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DA8236D948A00075743 /* StorageManager.swift */; };
-		EE913DAB2370125600075743 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DAA2370125600075743 /* MainViewController.swift */; };
+		EE913DAB2370125600075743 /* CounterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DAA2370125600075743 /* CounterListViewController.swift */; };
 		EE913DAD2370137A00075743 /* CustomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DAC2370137A00075743 /* CustomListTableViewCell.swift */; };
-		EE913DAF23701B7900075743 /* CounterStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE913DAE23701B7900075743 /* CounterStorage.swift */; };
+		EEDEEF70243DF5660049E268 /* CounterStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEEF6D243DF5660049E268 /* CounterStorage.swift */; };
+		EEDEEF71243DF5660049E268 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEEF6E243DF5660049E268 /* CounterModel.swift */; };
+		EEDEEF72243DF5660049E268 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEEF6F243DF5660049E268 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +33,11 @@
 		EE390124236D7BAF009A8B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE390126236D7BAF009A8B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE39012C236D8051009A8B99 /* CustomCounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCounterTableViewCell.swift; sourceTree = "<group>"; };
-		EE913DA6236D926900075743 /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
-		EE913DA8236D948A00075743 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		EE913DAA2370125600075743 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EE913DAA2370125600075743 /* CounterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterListViewController.swift; sourceTree = "<group>"; };
 		EE913DAC2370137A00075743 /* CustomListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListTableViewCell.swift; sourceTree = "<group>"; };
-		EE913DAE23701B7900075743 /* CounterStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStorage.swift; sourceTree = "<group>"; };
+		EEDEEF6D243DF5660049E268 /* CounterStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterStorage.swift; sourceTree = "<group>"; };
+		EEDEEF6E243DF5660049E268 /* CounterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		EEDEEF6F243DF5660049E268 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,20 +90,52 @@
 		EE390117236D7BAD009A8B99 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				EEE955E52541CE7900BAB614 /* ViewControllers */,
+				EEE955E62541CF7B00BAB614 /* Views */,
+				EEE955E42541CE5D00BAB614 /* Models */,
+				EEE955E72541D59600BAB614 /* Services */,
 				EE390118236D7BAD009A8B99 /* AppDelegate.swift */,
-				EE913DAA2370125600075743 /* MainViewController.swift */,
-				EE39011C236D7BAD009A8B99 /* CounterViewController.swift */,
 				EE39011E236D7BAD009A8B99 /* Main.storyboard */,
-				EE913DAC2370137A00075743 /* CustomListTableViewCell.swift */,
-				EE39012C236D8051009A8B99 /* CustomCounterTableViewCell.swift */,
-				EE913DA6236D926900075743 /* CounterModel.swift */,
-				EE913DAE23701B7900075743 /* CounterStorage.swift */,
-				EE913DA8236D948A00075743 /* StorageManager.swift */,
 				EE390121236D7BAF009A8B99 /* Assets.xcassets */,
 				EE390123236D7BAF009A8B99 /* LaunchScreen.storyboard */,
 				EE390126236D7BAF009A8B99 /* Info.plist */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		EEE955E42541CE5D00BAB614 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEDEEF6D243DF5660049E268 /* CounterStorage.swift */,
+				EEDEEF6E243DF5660049E268 /* CounterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EEE955E52541CE7900BAB614 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE913DAA2370125600075743 /* CounterListViewController.swift */,
+				EE39011C236D7BAD009A8B99 /* CounterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EEE955E62541CF7B00BAB614 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE913DAC2370137A00075743 /* CustomListTableViewCell.swift */,
+				EE39012C236D8051009A8B99 /* CustomCounterTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EEE955E72541D59600BAB614 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EEDEEF6F243DF5660049E268 /* StorageManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,14 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEDEEF70243DF5660049E268 /* CounterStorage.swift in Sources */,
+				EEDEEF71243DF5660049E268 /* CounterModel.swift in Sources */,
 				EE39011D236D7BAD009A8B99 /* CounterViewController.swift in Sources */,
+				EEDEEF72243DF5660049E268 /* StorageManager.swift in Sources */,
 				EE390119236D7BAD009A8B99 /* AppDelegate.swift in Sources */,
 				EE913DAD2370137A00075743 /* CustomListTableViewCell.swift in Sources */,
 				EE39012D236D8051009A8B99 /* CustomCounterTableViewCell.swift in Sources */,
-				EE913DAB2370125600075743 /* MainViewController.swift in Sources */,
-				EE913DA9236D948A00075743 /* StorageManager.swift in Sources */,
-				EE913DA7236D926900075743 /* CounterModel.swift in Sources */,
-				EE913DAF23701B7900075743 /* CounterStorage.swift in Sources */,
+				EE913DAB2370125600075743 /* CounterListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

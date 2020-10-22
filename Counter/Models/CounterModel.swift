@@ -16,5 +16,4 @@ class Counter: Object {
         self.init()
         self.value = value
     }
-    
 }

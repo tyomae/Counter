@@ -15,11 +15,9 @@ class CustomCounterTableViewCell: UITableViewCell {
     
     @IBOutlet var countLabel: UILabel! 
     @IBAction func plusButton(_ sender: Any) {
-         
-         plusButtonToched?()
+		self.plusButtonToched?()
     }
     @IBAction func minusButton(_ sender: Any) {
-        
-        minusButtonToched?()
+		self.minusButtonToched?()
     }
 }

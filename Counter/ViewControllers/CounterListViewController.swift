@@ -9,36 +9,16 @@
 import UIKit
 import RealmSwift
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CounterListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private var counterStorages: [CounterStorage]! {
+    private var counterStorages: [CounterStorage] {
            return Array(realm.objects(CounterStorage.self))
        }
     
     @IBOutlet var tableView: UITableView!
     
     @IBAction func plusButtonTouched(_ sender: AnyObject) {
-        
-        let alertController = UIAlertController(title: "Add New List", message: "", preferredStyle: UIAlertController.Style.alert)
-        alertController.view.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "Enter List Name"
-        }
-        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
-            let firstTextField = alertController.textFields![0] as UITextField
-            guard let text = firstTextField.text, !text.isEmpty else { return }
-            self.addList(name: text)
-            self.tableView.reloadData()
-        })
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.destructive, handler: {
-            (action : UIAlertAction!) -> Void in })
-
-        alertController.addAction(cancelAction)
-        alertController.addAction(saveAction)
-        
-
-        self.present(alertController, animated: true, completion: nil)
-        
+		self.showAddCounterAlert()
     }
     
     override func viewDidLoad() {
@@ -59,8 +39,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomListTableViewCell
-        
-        cell.listLabel.text = String(counterStorages[indexPath.row].name)
+
+        cell.listLabel.text = counterStorages[indexPath.row].name
 
         return cell
     }
@@ -88,12 +68,31 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         svc.countersStorage = counterStorages[indexPath.row]
            }
     
-    func addList(name: String) {
+    private func addList(name: String) {
            let newList = CounterStorage(name: name)
            StorageManager.saveObject(newList)
        }
+	
+	private func showAddCounterAlert() {
+		let alertController = UIAlertController(title: "Add New List", message: "", preferredStyle: UIAlertController.Style.alert)
+        alertController.view.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter List Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let firstTextField = alertController.textFields![0] as UITextField
+            guard let text = firstTextField.text, !text.isEmpty else { return }
+            self.addList(name: text)
+            self.tableView.reloadData()
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.destructive, handler: {
+            (action : UIAlertAction!) -> Void in })
 
-    
+        alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+	}
 }
 
 

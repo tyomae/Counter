@@ -17,5 +17,4 @@ class CounterStorage: Object {
         self.init()
         self.name = name
     }
-    
 }
